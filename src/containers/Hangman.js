@@ -120,6 +120,12 @@ class Hangman extends Component {
                     {this.state.nWrong < 6 && this.state.playing ? (
                         <p className='Hangman-btns'>{this.generateButtons()}</p>
                     ) : null}
+                    <div className='counter'>
+                        Wrong guesses: {this.state.nWrong}
+                    </div>
+                    <div className='answer'>
+                        Word Length: {this.state.answer.split('').length}
+                    </div>
                 </div>
             </>
         );
